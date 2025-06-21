@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://jazz/projects/backend/',
+        target: 'http://jazz/projects/backend/public/',
         changeOrigin: true
       },
       '/backend': {

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: jazz
+    env: php
+    plan: free
+    buildCommand: "composer install"
+    startCommand: "php -S 0.0.0.0:10000 -t backend/public"
+    envVars:
+      - key: DB_DSN
+        value: sqlite:/opt/render/project/src/database/projects.sqlite
+      - key: JWT_SECRET
+        value: 0500d3b485b0c922d74e5394fc3ac502dc8b283f7beee3430f6127287e95be24
