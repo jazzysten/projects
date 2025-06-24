@@ -136,7 +136,7 @@
       </div>
       <div class="project-right">
         {#each project.imgs.split(',') as img}
-          <img src={`/backend/public${img.trim()}`} alt={project.title} />
+          <img src={`/api/public${img.trim()}`} alt={project.title} />
         {/each}
       </div>
     </div>

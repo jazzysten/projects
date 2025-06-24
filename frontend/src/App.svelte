@@ -1,5 +1,6 @@
 <script>
   import Router, { location } from 'svelte-spa-router';
+  import { afterUpdate } from 'svelte';
   import Home from './routes/Home.svelte';
   import Contact from './routes/Contact.svelte';
   import Projects from './routes/Projects.svelte';
@@ -12,6 +13,7 @@
 
   let loading = true;
   let isAdminPage = false;
+  let previousLocation;
 
   onMount(() => {
     document.body.classList.add('no-scroll');
@@ -51,7 +53,9 @@
   }
 
   $: if ($location) {
-    scrollToTop();
+    setTimeout(() => {
+      window.scrollTo(0, -100);
+    }, 50);
   }
 
   $: showLogo = $location === '/';
@@ -82,12 +86,12 @@
   </div>
   <img
     class="main-img"
-    src="/src/assets/logo.png"
+    src="/assets/logo.png"
     alt="logo"
     style="opacity: {showLogo ? 1 : 0}; pointer-events: {showLogo ? 'auto' : 'none'};"
   >
   <div class="nav-right">
-    <a href="https://github.com/jazzysten" target="_blank"><img class="github-logo" src="/src/assets/github-mark.svg" alt="GitHub"></a>
+    <a href="https://github.com/jazzysten" target="_blank"><img class="github-logo" src="/assets/github-mark.svg" alt="GitHub"></a>
     <div class="nav-right--lang">
       {#if $currentLang === 'en'}
         <button type="button" on:click={() => setLang('ru')}>
@@ -111,8 +115,7 @@
     </a>
   </div>
   <div class="footer-dev">
-    {$dict.developed} <a href="mailto:jazz@gmail.com" target="_blank">jazz</a>
+    {$dict.developed} <a href="mailto:jazzystenweb@gmail.com" target="_blank">jazz</a>
   </div>
   <span class="footer-span">©2025</span>
 </footer>
-

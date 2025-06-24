@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
+import autoprefixer from 'autoprefixer'
+import path from 'path'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [svelte()],
   server: {
@@ -14,6 +15,28 @@ export default defineConfig({
         target: 'http://jazz/projects/',
         changeOrigin: true
       }
+    },
+    fs: { allow: ['.'] },
+    historyApiFallback: true
+  },
+  preview: {
+    historyApiFallback: true
+  },
+  build: {
+    outDir: 'public',
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name][extname]'
+      }
     }
-  }
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
+  base: './'
 })

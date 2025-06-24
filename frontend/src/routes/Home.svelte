@@ -17,7 +17,7 @@
   
     async function eraseChars(count) {
       for (let i = 0; i < count; i++) {
-        await wait(random(20, 40));
+        await wait(random(40, 60));
         displayText = displayText.slice(0, -1);
       }
     }
@@ -25,14 +25,11 @@
     async function typeWithMistakes() {
       displayText = '';
       await typeWord('devepol');
-      await wait(500);
+      await wait(700);
       await eraseChars(3);
-  
-      displayText = '';
-      await typeWord('developwe');
+      await typeWord('lopwe');
       await wait(1000);
       await eraseChars(5);
-  
       await typeWord('lopment');
     }
   
@@ -64,17 +61,17 @@
         <h2>{@html $dict.tech}</h2>
         <div class="tech-stack">
             <div><span>{$dict.webDev}</span><span>:</span></div>
-            <img src="/src/assets/html.svg" alt="html">
-            <img src="/src/assets/css.svg" alt="css">
-            <img src="/src/assets/js.svg" alt="js">
-            <img src="/src/assets/php.svg" alt="php">
-            <span class="stack"><span>jQuery</span><img src="/src/assets/jquery.svg" alt="jquery"></span>
-            <span class="stack"><span>Svelte</span><img src="/src/assets/svelte.svg" alt="svelte"></span>
+            <img src="./assets/html.svg" alt="html">
+            <img src="./assets/css.svg" alt="css">
+            <img src="./assets/js.svg" alt="js">
+            <img src="./assets/php.svg" alt="php">
+            <span class="stack"><span>jQuery</span><img src="./assets/jquery.svg" alt="jquery"></span>
+            <span class="stack"><span>Svelte</span><img src="./assets/svelte.svg" alt="svelte"></span>
         </div>
         <div class="design">
             <div><span>{$dict.design}</span><span>:</span></div>
-            <span class="stack">Photoshop <img src="/src/assets/photoshop.svg" alt="photoshop"></span>
-            <span class="stack">Figma <img src="/src/assets/figma.svg" alt="figma"></span>
+            <span class="stack">Photoshop <img src="./assets/photoshop.svg" alt="photoshop"></span>
+            <span class="stack">Figma <img src="./assets/figma.svg" alt="figma"></span>
         </div>
     </div>
   </section>

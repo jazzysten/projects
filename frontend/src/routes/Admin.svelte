@@ -217,7 +217,7 @@
 			{#each projects as project}
 			<div class="item {project.id === activeId ? 'active' : ''}" on:click={() => editProject(project)}>
 				<button class="delete-btn" on:click={(e) => { e.stopPropagation(); confirmDelete(project.id); }}>delete</button>
-				<img src={`/backend/public${project.imgs.split(',')[0]}`} alt={project.title} />
+				<img src={`/api/public${project.imgs.split(',')[0]}`} alt={project.title} />
 				<p>{project.title}</p>
 			</div>
 			{/each}

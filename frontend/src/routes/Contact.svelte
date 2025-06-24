@@ -75,7 +75,7 @@
 <section id="contact-section">
   <div class="contact">
     <div class="contact-left">
-      <p>{$dict.contactInfo} <a href="mailto:jazz@gmail.com">jazz@gmail.com</a></p>
+      <p>{$dict.contactInfo} <a href="mailto:jazzystenweb@gmail.com">jazzystenweb@gmail.com</a></p>
       <div>
         <p>{$dict.contactFormInfo}</p>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13" fill="none">

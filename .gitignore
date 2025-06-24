@@ -1,4 +1,5 @@
 .env
 /database/*.sqlite
+/database/*.php
 /public/projects
 render.yaml

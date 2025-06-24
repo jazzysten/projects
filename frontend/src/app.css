@@ -27,7 +27,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #fffefeab;
+  background-color: #fffefe80;
 }
 
 .no-scroll {
@@ -83,7 +83,7 @@ p {
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100svh;
   font-size: 24px;
 }
 
@@ -175,7 +175,7 @@ nav img {
 }
 
 .nav-left a {
-  padding: 0px 7px;
+  padding: 2px 7px;
   line-height: 1.2;
   color: #FFF;
   background-color: #1C1C1C;
@@ -263,7 +263,7 @@ nav img {
 section {
   text-align: left;
   z-index: 1;
-  background-color: #fffefeab;
+  background-color: #fffefe80;
   border: 1px solid var(--primary-color);
   border-right: 0;
   border-left: 0;
@@ -681,6 +681,7 @@ footer {
 
 .loading .loader {
   padding: 20px 0;
+  font-size: 16px;
 }
 
 .add-new-item,
@@ -716,8 +717,10 @@ footer {
 }
 
 @media (max-width: 1279px) {
-  .tech-stack {
+  .tech-stack,
+  .design {
     width: 100%;
+    justify-content: flex-start;
   }
   main {
     margin-top: -240px;
@@ -755,6 +758,9 @@ footer {
   }
   main a {
     margin: -2rem 10px 0 10px;
+  }
+  .nav-left a {
+    padding: 2px;
   }
   .nav-right {
     gap: 10px;
@@ -827,19 +833,11 @@ footer {
 }
 
 @media(max-width: 479px) {
-  body {
-    font-size: 14px;
-  }
-  h2 {
-    font-size: 24px;
-  }
-  footer {
-    font-size: 12px;
-  }
   main a {
     margin: -1rem 10px 0 10px;
+    line-height: 1.1;
   }
   input, textarea {
     font-size: 16px;
-}
+  }
 }

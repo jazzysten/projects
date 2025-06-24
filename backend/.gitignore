@@ -1,2 +1,5 @@
 /vendor/
+/database/
+/form.php
 *.log
+.env
